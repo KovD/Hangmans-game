@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman's game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <img src="pictures/0.svg" width="100" height="100" alt="SVG Image" class="pictures">
+        <p class="display">
+        </p>
+        <p>Hint: <span id = "hint"></span><br>Score: <span id="score"></span><br></p>
+        <br>
+    </div>
+
+    <P class="used_letters">Used letters: <br> <span id="used"></span></P>
+
+    <div class="shade" id="popup">
+        <div class="popup-content">
+            <h1>Game Over!</h1>
+            <p id="lost"><br>Your score: <span class="score"></span></p>
+            <p>Your score: <span id="final-score"></span></p>
+            <button id="restart" onclick="startGame()">Restart</button>
+        </div>
+    </div>
+
+    <div class="cover">
+        <h1 class="cover-title">Hangman's Game</h1>
+        <input type="text" class="cover-input" placeholder="Enter your name" id="name-input">
+        <button class="cover-button" onclick="login()">Enter</button>
+    </div>
+
+    <div class="leaderboard-container">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard"></ul>
+    </div>
+
+    <script src="client/client.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

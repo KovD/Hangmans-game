@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'western';
+    src: url('fonts/Montague.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'western', Arial, sans-serif;
+    background: linear-gradient(to bottom, #f3ff45, #992121);
+    font-size: 20px;
+}
+
+.center {
+    position: absolute; /* Az abszolút pozicionálás lehetővé teszi, hogy az elem középre kerüljön */
+    top: 50%; /* Felfelé középre igazítás */
+    left: 50%; /* Balra középre igazítás */
+    transform: translate(-50%, -50%); /* Középre igazítás a saját méretének felével */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.pictures {
+    width: 300px; /* Fix szélesség */
+    height: 300px; /* Fix magasság */
+    max-width: 100%; /* Ne legyen nagyobb, mint a szülő elem */
+    max-height: 100%; /* Ne legyen nagyobb, mint a szülő elem */
+    overflow: hidden; /* Rejtse el a túlfolyó tartalmat */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.letter {
+    list-style-type: none;
+    margin: 0;
+    font-size: 30px;
+    width: 30px; /* Növelje a szélességet, ha szükséges */
+    height: 30px;
+    display: inline-flex; /* Használjon flexboxot az igazításhoz */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.display {
+    display: flex;
+    flex-wrap: nowrap; /* Ne törjön új sorba */
+    padding: 0;
+    margin: 0;
+    white-space: nowrap; /* Ne törje meg a szavakat új sorra */
+}
+
+
+.used_letters {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 20px;
+    right: 50px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #f8d7d9;
+    border-radius: 15px;
+    border: 2px solid #f5c6cb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#used {
+    direction: rtl;
+    text-align: right;
+}
+
+#restart {
+    color: #000000;
+    background-color: #eacd61;
+    font-size: 26px;
+    border: 3px solid #903227;
+    border-radius: 26px;
+    padding: 15px 50px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+
+#restart:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.shade{
+    background-color: #0000002b;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: wheat;
+    width: 500px;
+    height: 300px;
+    box-shadow: 5px 5px 5px -0.3px #000000;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.cover {
+    background: linear-gradient(to bottom, #ff8b3e, #992121);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    text-align: center;
+}
+
+.cover-title {
+    color: #000000;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.cover-input {
+    font-size: 24px;
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #903227;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cover-button {
+    font-size: 26px;
+    padding: 10px 30px;
+    background-color: #eacd61;
+    border: 3px solid #903227;
+    border-radius: 26px;
+    cursor: pointer;
+}
+
+.leaderboard-container {
+    margin-top: 20px;
+}
+
+.leaderboard-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.leaderboard-container li {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.cover-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
