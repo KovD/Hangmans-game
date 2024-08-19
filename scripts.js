@@ -18,7 +18,7 @@ const finalScore = document.getElementById("final-score")
 const input = document.getElementById('name-input')
 const cover = document.querySelector(".cover");
 let playerData;
-const adress = 'ws://hm-game.glitch.me/';
+const adress = 'wss://hm-game.glitch.me/';
 //const adress = 'ws://localhost:5000';
 let client;
 
